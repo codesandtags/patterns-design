@@ -1,5 +1,6 @@
 package codesandtags.singleton;
 
+
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -13,6 +14,7 @@ public class SingletonTest extends TestCase {
         assertNotNull(Singleton.getInstance());
     }
 
+    @Test
     public void testCount(){
         System.out.println("Count => " + Singleton.getInstance().getCount());
         assertTrue( Singleton.getInstance().getCount() > 1);
