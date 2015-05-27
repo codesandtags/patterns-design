@@ -1,23 +1,16 @@
 package codesandtags.singleton;
 
-
-import junit.framework.TestCase;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 /**
- * Created by Edwin on 25/05/2015.
+ * Created by Edwin on 26/05/2015.
  */
-public class SingletonTest extends TestCase {
+public class SingletonTest {
 
     @Test
-    public void testInstance(){
-        assertNotNull(Singleton.getInstance());
+    public void testGetInstance() throws Exception {
+        Singleton prueba = Singleton.getInstance();
+        Assert.assertNotNull(prueba);
     }
-
-    @Test
-    public void testCount(){
-        System.out.println("Count => " + Singleton.getInstance().getCount());
-        assertTrue( Singleton.getInstance().getCount() > 1);
-    }
-
 }
